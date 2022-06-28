@@ -7,25 +7,48 @@
 let countEl = document.getElementById("count-el") //pass in argument
 let count = 0
 function increment() {
-    count=count+1
-    countEl.innerText=count
+    count+=1
+    countEl.textContent=count
 }
 
-//create a function, save(), which logs out the count when it's called
+// 1. Grab the save-el paragrah and store it in a variable called saveEl
+let saveEl=document.getElementById("save-el")
 function save() {
-    console.log(count)
+    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
+    // 3. Render the variable in the saveEl using innerText
+    // NB: Make sure to not delete the existing content of the paragraph
+    let ele=count+" - "
+    saveEl.textContent+=ele
+    countEl.textContent=0
+    count=0
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Create a variable message, that stores the string: "You have three new notifications"
-let username="per"
-let message="You have three new notifications"
+// let username="per"
+// let message="You have three new notifications"
 
 
 
 //Create a variable messageToUser, that contains the message we have logged
 
-let messageToUser=message+", "+username+"!"
-console.log(messageToUser)
+// let messageToUser=message+", "+username+"!"
+// console.log(messageToUser)
 
 
 
